@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "apache2": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb -p apache2",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "refresh": 300,
+      "subscribers": [
+        "apache2"
+      ],
+      "tags": {
+        "group": "web"
+      }
+    }
+  }
+}

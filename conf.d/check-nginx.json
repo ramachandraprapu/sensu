@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "nginx": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb -p nginx",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "refresh": 300,
+      "subscribers": [
+        "nginx"
+      ],
+      "tags": {
+        "group": "web"
+      }
+    }
+  }
+}

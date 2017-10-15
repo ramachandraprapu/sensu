@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "httpd": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb -p httpd",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "refresh": 300,
+      "subscribers": [
+        "httpd"
+      ],
+      "tags": {
+        "group": "web"
+      }
+    }
+  }
+}

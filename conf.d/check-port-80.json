@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "port-80": {
+      "command": "check-ports.rb -p 80 -t 30",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "refresh": 300,
+      "subscribers": [
+        "80",
+        "apache2",
+	"httpd",
+	"nginx"
+      ],
+      "tags": {
+        "group": "web"
+      }
+    }
+  }
+}

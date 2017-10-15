@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "CPU": {
+      "command": "/opt/sensu/embedded/bin/check-cpu.rb -w 80 -c 90",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 7,
+      "refresh": 600,
+      "subscribers": [
+        "ALL"
+      ],
+      "tags": {
+        "group": "Devops"
+      }
+    }
+  }
+}

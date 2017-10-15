@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "tomcat7": {
+      "command": "/opt/sensu/embedded/bin/check-process.rb -p tomcat7",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "refresh": 300,
+      "subscribers": [
+        "tomcat7"
+      ],
+      "tags": {
+        "group": "app"
+      }
+    }
+  }
+}
