@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "port-443": {
+      "command": "check-ports.rb -p 443 -t 30",
+      "handlers": [
+        "mailer"
+      ],
+      "interval": 60,
+      "occurrences": 3,
+      "refresh": 300,
+      "subscribers": [
+        "443"
+      ],
+      "tags": {
+        "group": "web"
+      }
+    }
+  }
+}
