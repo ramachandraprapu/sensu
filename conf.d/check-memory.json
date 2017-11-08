@@ -6,14 +6,30 @@
         "mailer"
       ],
       "interval": 60,
-      "occurrences": 7,
+      "occurrences": 5,
       "refresh": 600,
       "subscribers": [
         "ALL"
       ],
+      "standalone": false,
       "tags": {
         "group": "Devops"
       }
-    }
+    },
+    "metrics-Memory": {
+      "command": "/opt/sensu/embedded/bin/metrics-memory-percent.rb",
+      "handlers": [
+        "influxdb"
+      ],
+      "interval": 60,
+      "subscribers": [
+        "ALL"
+      ],
+      "type": "metric",
+      "standalone": false,
+      "tags": {
+        "group": "Devops"
+      }
+    }  
   }
 }
