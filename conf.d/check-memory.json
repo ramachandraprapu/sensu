@@ -16,7 +16,7 @@
         "group": "Devops"
       }
     },
-    "metrics-Memory": {
+    "Memory-metric": {
       "command": "/opt/sensu/embedded/bin/metrics-memory-percent.rb",
       "handlers": [
         "influxdb"
